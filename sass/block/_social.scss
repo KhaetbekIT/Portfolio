@@ -1,0 +1,37 @@
+.social{
+    &.about__social{
+        width: 360px;
+        @media (max-width: 1139px){
+            width: 320px;
+        }
+        @media (max-width: 899px){
+            width: 270px;
+        }
+    }
+    .link{
+        
+        @extend %link;
+    }
+}
+.social__row{
+    .social__wrapper{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    .social__link{
+
+        &:not(:last-child){
+            margin-right: 30px;
+
+            @media (max-width: 1139px){
+                margin-right: 20px;
+            }
+            
+
+        }
+        @media (max-width: 899px){
+            width: 38px;
+        }
+    }
+}

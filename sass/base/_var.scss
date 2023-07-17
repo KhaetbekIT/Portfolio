@@ -1,0 +1,19 @@
+%title {
+    display: inline;
+    background-repeat: no-repeat;
+    background-position: center bottom 14px;
+    background-size: 100% 12px;
+    background-image: linear-gradient(to right,  #FBDC4D, #FBDC4D);    
+    line-height: 1;
+}
+
+%link {
+    font-size: 22px;
+    line-height: 1.30;
+    color: #1A71D2;
+    font-weight: 400;
+
+    @media (max-width: 1199px){
+        font-size: 18px;
+    }
+}

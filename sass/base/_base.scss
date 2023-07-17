@@ -1,0 +1,91 @@
+html,
+body {
+    height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+input,
+button,
+textarea {
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.container {
+    width: 1140px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    @media (max-width: 1139px) {
+        width: 900px;
+    }
+    @media (max-width: 899px) {
+        width: 768px;
+    }
+    @media (max-width: 767px) {
+        width: 320px;
+    }
+}
+
+.none {
+    display: none;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(37, 73, 116, 0.8);
+    z-index: 2;
+}
+
+.noscroll {
+    overflow: hidden;
+}

@@ -1,0 +1,30 @@
+.button{
+    display: inline-block;
+    cursor: pointer;
+    padding-right: 40px;
+    padding-left: 40px;
+    line-height: 64px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #000;
+    margin-right: 20px;
+    background: #FBDC4D;
+    border-radius: 50px;
+
+    @media (max-width: 1139px){
+        padding-right: 26px;
+        padding-left: 26px;
+        line-height: 58px;
+    }
+}
+
+.button--blue {        
+    background: #eff7fc;
+    border-radius: 50px;
+}
+
+.center__button{
+    @media (max-width: 899px){
+        display: none;
+    }
+}

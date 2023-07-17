@@ -1,0 +1,121 @@
+
+.card{
+    width: 540px;
+    margin-right: 15px;
+    margin-left: 15px;
+
+    .card__description{
+        padding-top: 20px;
+        padding-bottom: 50px;
+
+        @media (max-width: 1139px){
+            padding-bottom: 40px;
+        }
+        @media (max-width: 899px){
+            padding-top: 10px;
+            padding-bottom: 20px;
+        }
+        @media (max-width: 767px){
+            padding-bottom: 30px;
+        }
+    }
+
+    .card__title{
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 1.30;
+        color: #000000;
+        margin-bottom: 8px;
+
+
+        @media (max-width: 1139px){
+            font-size: 24px;
+            margin-bottom: 6px;
+        }
+        @media (max-width: 899px){
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+    }
+
+    .card__text{
+        font-size: 20px;
+        line-height: 1.30;
+        color: #000000;
+
+        @media (max-width: 1139px){
+            font-size: 16px;
+        }
+        @media (max-width: 899px){
+            font-size: 14px;
+        }
+    }
+
+
+    @media (max-width: 1139px){
+        width: 420px;
+    }
+    @media (max-width: 899px){
+        width: 354px;
+    }
+    @media (max-width: 767px){
+        width: 290px;
+    }
+}
+.card.small{
+    width: 350px;
+    .card__desc{
+        padding-top: 16px;
+
+        @media (max-width: 1139px){
+            padding-top: 10px;
+        }
+        @media (max-width: 767px){
+            padding-bottom: 30px;
+        } 
+        
+        &.pb-0{
+            @media (max-width: 767px){
+                padding-bottom: 0;
+            }
+        }
+    }
+    .card__title{
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 1.30;
+        color: #000000;
+        margin-bottom: 6px;
+
+        @media (max-width: 1139px){
+            font-size: 16px;
+        }
+        @media (max-width: 899px){
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+    }
+
+    .card__text{
+        font-size: 18px;
+        line-height: 1.30;
+        color: #000000;
+
+        @media (max-width: 1139px){
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 1139px){
+        width: 270px;
+    }
+    @media (max-width: 899px){
+        width: 226px;
+    }
+    @media (max-width: 767px){
+        width: 290px;
+    }
+}
+

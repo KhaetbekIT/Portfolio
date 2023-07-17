@@ -1,0 +1,23 @@
+.title{
+    font-weight: bold;
+    color: #000000;
+}
+
+.title-2{
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 1.30;
+    margin-bottom: 30px;
+
+    color: #000000;
+
+    @media (max-width: 1139px){
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 899px){
+        font-size: 24px;
+    }
+
+}

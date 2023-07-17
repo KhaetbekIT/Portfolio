@@ -1,0 +1,29 @@
+.section-portfolio{
+    padding-top: 80px;
+    padding-bottom: 90px;
+    background-color: #F4F8F9;
+
+    @media (max-width: 1139px){
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+    @media (max-width: 1139px){
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+}
+
+.card__row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-right: -15px;
+    margin-left: -15px;
+
+    .card__link{
+        transition: 0.4s;
+    }
+    .card__link:hover{
+        opacity: 0.7;
+    }
+}
