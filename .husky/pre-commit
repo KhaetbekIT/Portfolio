@@ -1,5 +1,0 @@
-echo '🏗️👷 Linting, formatting, type checking and building your project before committing'
-
-npx lint-staged && pnpm typecheck
-
-echo '✅ All test passed. Committing...'
