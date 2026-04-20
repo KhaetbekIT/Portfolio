@@ -191,6 +191,31 @@ ${t("telegram.message")}: ${data.message}
 										)}
 									</div>
 
+									{/* Phone */}
+									<div className="space-y-2">
+										<Label htmlFor="phone">
+											{t("form.phone")}
+										</Label>
+										<Input
+											id="phone"
+											type="tel"
+											placeholder={t(
+												"form.phonePlaceholder",
+											)}
+											{...register("phone")}
+											className={
+												errors.phone
+													? "border-destructive"
+													: ""
+											}
+										/>
+										{errors.phone && (
+											<p className="text-sm text-destructive">
+												{errors.phone.message}
+											</p>
+										)}
+									</div>
+
 									{/* Message */}
 									<div className="space-y-2">
 										<Label htmlFor="message">
