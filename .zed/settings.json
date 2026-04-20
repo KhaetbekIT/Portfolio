@@ -1,0 +1,51 @@
+{
+  "[css]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "editor.insertSpaces": false,
+  "editor.tabSize": 4,
+  "editor.detectIndentation": false,
+  "editor.defaultFormatter": "biomejs.biome",
+  "cSpell.language": "en,ru,uz",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.biome": "explicit",
+    "source.organizeImports.biome": "explicit"
+  },
+  "i18n-ally.extract.autoDetect": true,
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.localesPaths": ["./messages"],
+  "i18n-ally.tabStyle": "tab",
+  "i18n-ally.sourceLanguage": "ru",
+  "oxc.enable": true,
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(((?:[^()]|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(((?:[^()]|\\([^()]*\\))*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+  "typescript.preferences.autoImportFileExcludePatterns": ["@radix-ui/*"],
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "workbench.editor.customLabels.patterns": {
+    "**/api.ts": "${dirname} (api)",
+    "**/app/**/*id*/page.tsx": "${dirname(1)} [${dirname}] (page)",
+    "**/app/**/*slug*/page.tsx": "${dirname(1)} [${dirname}] (page)",
+    "**/app/**/page.tsx": "${dirname} (page)",
+    "**/components/**/index.tsx": "${dirname} (component)",
+    "**/index.ts": "${dirname} (index)",
+    "**/index.tsx": "${dirname} (index)",
+    "**/pages/**/index.tsx": "${dirname} (page)",
+    "**/style.css": "${dirname} (style)",
+    "**/style.scss": "${dirname} (style)",
+    "**/type.ts": "${dirname} (type)"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
+}

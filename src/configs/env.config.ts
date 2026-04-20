@@ -1,0 +1,9 @@
+export const ENV = {
+	NEXT_PUBLIC_URL: process.env.NEXT_PUBLIC_URL!,
+	GITHUB_URL: process.env.GITHUB_URL!,
+	LINKEDIN_URL: process.env.LINKEDIN_URL!,
+	EMAIL: process.env.EMAIL!,
+	TELEGRAM_BOT_TOKEN: process.env.TELEGRAM_BOT_TOKEN!,
+	TELEGRAM_BOT_CHATID: process.env.TELEGRAM_BOT_CHATID!,
+	TELEGRAM_BOT_API: process.env.TELEGRAM_BOT_API!,
+};

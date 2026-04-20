@@ -1,0 +1,163 @@
+{
+	"SEO": {
+		"title": "Toshkentda frontend dasturchi | React, Next.js, TypeScript",
+		"description": "React va Next.js orqali tez va scalable web ilovalar yarataman. Bizneslar uchun sayt va servislar ishlab chiqaman hamda frontend dasturchilarni real loyihalar orqali o‘qitaman.",
+		"keywords": "frontend dasturchi toshkent, react developer uzbekistan, next.js toshkent, sayt yaratish toshkent, web dasturlash, frontend kurs toshkent, javascript dasturchi"
+	},
+	"Footer": {
+		"description": "Frontend dasturchi va mahsulot yaratuvchi. Haqiqiy qiymat beradigan raqamli yechimlar yarataman.",
+		"rights": "Barcha huquqlar himoyalangan.",
+		"navigation": {
+			"title": "Navigatsiya",
+			"home": "Bosh sahifa",
+			"about": "Men haqimda",
+			"projects": "Loyihalar",
+			"blog": "Blog"
+		},
+		"services": {
+			"title": "Xizmatlar",
+			"products": "Mahsulotlar",
+			"mentorship": "Mentorlik",
+			"consulting": "Konsalting"
+		},
+		"contacts": {
+			"title": "Aloqa",
+			"form": "Aloqa formasi",
+			"email": "Elektron pochta"
+		}
+	},
+	"HomePage": {
+		"Hero": {
+			"greeting": "Portfolio sahifamga xush kelibsiz",
+			"title_prefix": "Salom, men ",
+			"roles": [
+				"Frontend dasturchi",
+				"Mentor",
+				"Mahsulot yaratuvchi"
+			],
+			"bio": "Men web uchun qulay va pixel-perfect raqamli yechimlar yarataman. 4 yillik tajriba bilan scalable frontend arxitekturalar va yangi dasturchilarni o‘qitishga ixtisoslashganman.",
+			"projects": "Loyihalarni ko‘rish",
+			"contact": "Bog‘lanish"
+		},
+		"AboutPreview": {
+			"label": "Loyiha haqida",
+			"title": "Sifatli web tajribalar yaratishga ishtiyoq",
+			"extra": "Dasturlashdan tashqari, bilim va ko‘nikmalarni rivojlantirishga katta e’tibor qaratiladi. Yangi dasturchilarga mentorlik va amaliy tajriba orqali tezroq rivojlanishga yordam beriladi.",
+			"more": "Batafsil"
+		},
+		"ProjectsPreview": {
+			"label": "Tanlangan ishlar",
+			"title": "Tanlangan loyihalar",
+			"description": "Zamonaviy, scalable va foydalanuvchi uchun qulay ilovalar yaratish tajribasini ko‘rsatadigan loyihalar to‘plami.",
+			"featured": "Tanlangan",
+			"open": "Saytni ochish",
+			"all": "Barcha loyihalar"
+		}
+	},
+	"AboutPage": {
+		"About": {
+			"label": "Мен haqimda",
+			"title": "Frontend dasturchi",
+			"location": "Toshkent, O‘zbekiston",
+			"experienceYears": "4+ yil tajriba",
+			"bio": {
+				"title": "Umumiy ma’lumot",
+				"p1": "Zamonaviy va scalable web ilovalar yaratishga ixtisoslashgan frontend dasturchi. Startaplar va mahsulot jamoalari bilan ishlash tajribasi mavjud.",
+				"p2": "Asosiy e’tibor — toza arxitektura, performance va foydalanuvchi tajribasi. Loyihalarda faol ishtirok va bilim ulashish.",
+				"p3": "Yangi texnologiyalarni o‘rganish va production darajadagi tizimlar ustida ishlash."
+			},
+			"experience": "Tajriba",
+			"skills": "Ko‘nikmalar",
+			"teaching": {
+				"title": "Rivojlanish va mentorlik",
+				"p1": "Dasturchilarni real loyihalar orqali rivojlantirish tajribasi mavjud.",
+				"p2": "Amaliy yondashuv va real muammolarni hal qilishga asoslangan o‘rganish."
+			}
+		},
+		"SEO": {
+			"title": "Frontend dasturchi — Haqida",
+			"description": "React, Next.js va TypeScript bilan ishlovchi frontend dasturchi. Scalable web ilovalar yaratish va UX ni yaxshilash.",
+			"keywords": "frontend dasturchi, React, Next.js, TypeScript, web development, portfolio"
+		}
+	},
+	"ProjectsPage": {
+		"Projects": {
+			"header": {
+				"label": "Portfolio",
+				"title": "Loyihalarim",
+				"description": "Zamonaviy, scalable va foydalanuvchiga qulay ilovalar yaratish tajribasini ko‘rsatadigan barcha loyihalar to‘plami."
+			},
+			"search": {
+				"placeholder": "Loyihalarni qidirish..."
+			},
+			"filters": {
+				"all": "Barchasi"
+			},
+			"project": {
+				"featured": "Tanlangan",
+				"demo": "Demo",
+				"source": "Manba kodi"
+			},
+			"empty": {
+				"title": "Sizning filtrlaringiz bo‘yicha loyihalar topilmadi.",
+				"reset": "Filtrlarni tozalash"
+			}
+		},
+		"ById": {
+			"back": "Loyihalarga qaytish",
+			"featured": "Tanlangan loyiha",
+			"demo": "Demo ko‘rish",
+			"source": "Manba kodi",
+			"about": "Loyiha haqida",
+			"responsibilities": "Vazifalarim",
+			"results": "Asosiy natijalar",
+			"technologies": "Texnologiyalar",
+			"screenshots": "Skrinshotlar"
+		}
+	},
+	"ContactsPage": {
+		"header": {
+			"label": "Bog‘lanish",
+			"title": "Keling, birga ishlaymiz",
+			"description": "Loyihangiz bormi yoki hamkorlik qilmoqchimisiz? Menga yozing, tez orada javob beraman."
+		},
+		"form": {
+			"title": "Xabar yuborish",
+			"name": "Ism",
+			"namePlaceholder": "Ismingiz",
+			"email": "Email",
+			"emailPlaceholder": "your@email.com",
+			"message": "Xabar",
+			"messagePlaceholder": "Loyihangiz haqida yozing...",
+			"submit": "Yuborish",
+			"successTitle": "Xabar yuborildi!",
+			"successDescription": "Murojaatingiz uchun rahmat. Tez orada javob beraman."
+		},
+		"toast": {
+			"success": "Xabar yuborildi",
+			"error": "Xatolik yuz berdi"
+		},
+		"info": {
+			"email": "Email",
+			"location": "Joylashuv",
+			"locationValue": "Toshkent, O‘zbekiston"
+		},
+		"social": {
+			"title": "Bog‘lanish",
+			"github": "GitHub",
+			"linkedin": "LinkedIn",
+			"instagram": "Instagram"
+		},
+		"availability": {
+			"title": "Ish uchun ochiq",
+			"description": "Yangi loyihalar va hamkorlik uchun ochiqman. Loyihangizni muhokama qilamiz!"
+		},
+		"telegram": {
+			"title": "Yangi so‘rov",
+			"name": "Ism",
+			"email": "Email",
+			"message": "Xabar",
+			"phone": "Telefon"
+		}
+	}
+}

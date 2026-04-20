@@ -1,0 +1,5 @@
+echo '🏗️👷 Linting, formatting, type checking, and building your project before committing'
+
+pnpm lint:staged && pnpm typecheck
+
+echo '✅ All tests passed. Committing...'
