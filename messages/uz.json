@@ -131,7 +131,9 @@
 			"messagePlaceholder": "Loyihangiz haqida yozing...",
 			"submit": "Yuborish",
 			"successTitle": "Xabar yuborildi!",
-			"successDescription": "Murojaatingiz uchun rahmat. Tez orada javob beraman."
+			"successDescription": "Murojaatingiz uchun rahmat. Tez orada javob beraman.",
+			"phone": "Telefon",
+			"phonePlaceholder": "+998 99 999 99 99"
 		},
 		"toast": {
 			"success": "Xabar yuborildi",

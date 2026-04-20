@@ -131,7 +131,10 @@
 			"messagePlaceholder": "Tell me about your project...",
 			"submit": "Send Message",
 			"successTitle": "Message Sent!",
-			"successDescription": "Thank you for reaching out. I'll get back to you soon."
+			"successDescription": "Thank you for reaching out. I'll get back to you soon.",
+			"phone": "Phone",
+			"phonePlaceholder": "+998 99 999 99 99"
+
 		},
 		"toast": {
 			"success": "Message sent",

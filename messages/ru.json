@@ -131,7 +131,9 @@
 			"messagePlaceholder": "Расскажите о вашем проекте...",
 			"submit": "Отправить",
 			"successTitle": "Сообщение отправлено!",
-			"successDescription": "Спасибо за обращение. Я скоро свяжусь с вами."
+			"successDescription": "Спасибо за обращение. Я скоро свяжусь с вами.",
+			"phone": "Телефон",
+			"phonePlaceholder": "+998 99 999 99 99"
 		},
 		"toast": {
 			"success": "Сообщение отправлено",

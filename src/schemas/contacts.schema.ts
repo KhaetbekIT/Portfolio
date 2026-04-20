@@ -10,13 +10,13 @@ export const contactSchema = z.object({
 		.trim()
 		.regex(
 			/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-			"Invalid email address",
+			"Invalid email address. Must be your@email.com",
 		)
 		.optional(),
 	phone: z
 		.string()
 		.trim()
-		.regex(/^\+998\d{9}$/, "Invalid phone number"),
+		.regex(/^\+998\d{9}$/, "Invalid phone number. Must be +998XXXXXXXXX"),
 	message: z
 		.string()
 		.trim()
