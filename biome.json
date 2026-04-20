@@ -1,29 +1,54 @@
 {
 	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
 	"assist": {
-		"actions": { "source": { "recommended": true } },
+		"actions": {
+			"recommended": true,
+			"source": {
+				"recommended": true
+			}
+		},
 		"enabled": true
+	},
+	"files": {
+		"includes": [
+			"src/**/*.{js,jsx,ts,tsx}",
+			"./*.*",
+			"!**/.git",
+			"!**/node_modules",
+			"!**/.next",
+			"!**/*.test.tsx",
+			"!**/*.test.ts",
+			"!src/app/\\[locale\\]/(app)/test"
+		]
 	},
 	"formatter": {
 		"enabled": true,
-		"includes": ["**", "!**/.next", "!**/node_modules", "!**/messages"]
+		"includes": ["src/**/*.{js,jsx,ts,tsx}"],
+		"indentStyle": "tab",
+		"indentWidth": 4
 	},
 	"linter": {
 		"domains": {
-			"next": "recommended",
-			"react": "all"
+			"next": "all",
+			"project": "recommended",
+			"react": "recommended",
+			"tailwind": "all"
 		},
 		"enabled": true,
 		"includes": [
-			"**",
-			"!**/.next",
+			"src/**/*.{js,jsx,ts,tsx}",
+			"!src/app/\\[locale\\]/(app)/test",
 			"!**/node_modules",
-			"!src/app/\\[locale\\]/(app)/test"
+			"!**/.next",
+			"!**/*.test.tsx",
+			"!**/*.test.ts",
+			"!**/test/**"
 		],
 		"rules": {
 			"a11y": {
 				"noSvgWithoutTitle": "off",
-				"useKeyWithClickEvents": "off"
+				"useKeyWithClickEvents": "off",
+				"useSemanticElements": "warn"
 			},
 			"complexity": {
 				"noAdjacentSpacesInRegex": "error",
@@ -34,8 +59,8 @@
 			},
 			"correctness": {
 				"noChildrenProp": "error",
-				"noConstAssign": "error",
 				"noConstantCondition": "error",
+				"noConstAssign": "error",
 				"noEmptyCharacterClassInRegex": "error",
 				"noEmptyPattern": "error",
 				"noGlobalObjectCalls": "error",
@@ -59,19 +84,24 @@
 				"useHookAtTopLevel": "error",
 				"useIsNan": "error",
 				"useJsxKeyInIterable": "error",
+				"useUniqueElementIds": "off",
 				"useValidForDirection": "error",
 				"useValidTypeof": "error",
 				"useYield": "error"
 			},
 			"nursery": {
-				"useUniqueElementIds": "off"
+				"recommended": true
 			},
 			"performance": {
+				"noBarrelFile": "error",
 				"recommended": true
 			},
 			"recommended": true,
-			"security": { "noDangerouslySetInnerHtml": "error" },
+			"security": {
+				"noDangerouslySetInnerHtml": "off"
+			},
 			"style": {
+				"recommended": true,
 				"noInferrableTypes": "error",
 				"noNamespace": "error",
 				"noParameterAssign": "error",
@@ -84,9 +114,11 @@
 				"useNumberNamespace": "error",
 				"useSelfClosingElements": "warn",
 				"useSingleVarDeclarator": "error",
-				"useTemplate": "error"
+				"useTemplate": "error",
+				"useShorthandFunctionType": "error"
 			},
 			"suspicious": {
+				"recommended": true,
 				"noAsyncPromiseExecutor": "error",
 				"noCatchAssign": "error",
 				"noClassAssign": "error",

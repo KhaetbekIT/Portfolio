@@ -1,24 +1,8 @@
-import type { LayoutType } from "@/types/type";
-import "@/styles/globals.css";
-import { Manrope } from "next/font/google";
-import { cn } from "@/lib/utils";
+import "@/css/globals.css";
+import type { LayoutProps } from "@/types/layouts.type";
 
-const manrope = Manrope({
-	subsets: ["latin"],
-	variable: "--font-manrope",
-	weight: ["400", "500", "600", "700", "800"],
-});
-
-const RootLayout: LayoutType = async ({ children }) => {
-	return (
-		<html
-			className={cn("scroll-smooth", manrope.className)}
-			lang="ru"
-			translate="no"
-		>
-			{children}
-		</html>
-	);
+const AppLayout = async ({ children }: LayoutProps) => {
+	return children;
 };
 
-export default RootLayout;
+export default AppLayout;

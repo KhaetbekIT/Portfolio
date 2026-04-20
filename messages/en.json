@@ -1,0 +1,163 @@
+{
+	"SEO": {
+		"title": "Frontend Developer in Tashkent | React, Next.js, TypeScript",
+		"description": "Frontend developer based in Tashkent building high-performance web applications with React and Next.js. I help businesses launch fast, scalable products and train students to become job-ready developers.",
+		"keywords": "frontend developer tashkent, react developer uzbekistan, next.js developer tashkent, web development tashkent, hire frontend developer uzbekistan, react mentor tashkent, javascript developer uzbekistan"
+	},
+	"Footer": {
+		"description": "Frontend developer and product builder. I create digital solutions that deliver real value.",
+		"rights": "All rights reserved.",
+		"navigation": {
+			"title": "Navigation",
+			"home": "Home",
+			"about": "About",
+			"projects": "Projects",
+			"blog": "Blog"
+		},
+		"services": {
+			"title": "Services",
+			"products": "Products",
+			"mentorship": "Mentorship",
+			"consulting": "Consulting"
+		},
+		"contacts": {
+			"title": "Contacts",
+			"form": "Contact form",
+			"email": "Email"
+		}
+	},
+	"HomePage": {
+		"Hero": {
+			"greeting": "Welcome to my portfolio",
+			"title_prefix": "Hi, I’m ",
+			"roles": [
+				"Frontend Developer",
+				"Mentor",
+				"Product Builder"
+			],
+			"bio": "I craft accessible, pixel-perfect digital experiences for the web. With over 4 years of experience, I specialize in building scalable frontend architectures and mentoring the next generation of developers.",
+			"projects": "View Projects",
+			"contact": "Contact Me"
+		},
+		"AboutPreview": {
+			"label": "About",
+			"title": "Passionate about building high-quality web experiences",
+			"extra": "Beyond development, there is a strong focus on learning and continuous skill growth. Helping aspiring developers accelerate their careers through mentorship and hands-on experience.",
+			"more": "Learn more"
+		},
+		"ProjectsPreview": {
+			"label": "Featured Work",
+			"title": "Selected Projects",
+			"description": "A collection of projects showcasing experience in building modern, scalable, and user-friendly applications.",
+			"featured": "Featured",
+			"open": "Open Website",
+			"all": "All Projects"
+		}
+	},
+	"AboutPage": {
+		"About": {
+			"label": "About",
+			"title": "Frontend Developer",
+			"location": "Tashkent, Uzbekistan",
+			"experienceYears": "4+ years of experience",
+			"bio": {
+				"title": "Overview",
+				"p1": "Experienced frontend developer focused on building modern, scalable, and high-performance web applications. Worked with startups, agencies, and product teams on real-world projects.",
+				"p2": "Strong focus on clean architecture, performance, and user experience. Actively involved in knowledge sharing, mentoring, and improving development processes.",
+				"p3": "Continuously exploring new technologies, improving system design skills, and working on production-level applications."
+			},
+			"experience": "Experience",
+			"skills": "Skills",
+			"teaching": {
+				"title": "Mentorship & Growth",
+				"p1": "Experience in mentoring developers and helping them grow in frontend development through practical tasks and real-world scenarios.",
+				"p2": "Focused on hands-on learning, problem solving, and building production-ready applications."
+			}
+		},
+		"SEO": {
+			"title": "Frontend Developer — About",
+			"description": "Frontend developer specializing in React, Next.js, and TypeScript. Focused on building scalable web applications and improving user experience.",
+			"keywords": "frontend developer, React, Next.js, TypeScript, web development, portfolio, UI development"
+		}
+	},
+	"ProjectsPage": {
+		"Projects": {
+			"header": {
+				"label": "Portfolio",
+				"title": "My Projects",
+				"description": "A complete collection of my work showcasing experience in building modern, scalable, and user-friendly applications."
+			},
+			"search": {
+				"placeholder": "Search projects..."
+			},
+			"filters": {
+				"all": "All"
+			},
+			"project": {
+				"featured": "Featured",
+				"demo": "Demo",
+				"source": "Source Code"
+			},
+			"empty": {
+				"title": "No projects found based on your criteria.",
+				"reset": "Reset filters"
+			}
+		},
+		"ById": {
+			"back": "Back to projects",
+			"featured": "Featured Project",
+			"demo": "View Demo",
+			"source": "Source Code",
+			"about": "About the project",
+			"responsibilities": "Responsibilities",
+			"results": "Key Results",
+			"technologies": "Technologies",
+			"screenshots": "Screenshots"
+		}
+	},
+	"ContactsPage": {
+		"header": {
+			"label": "Get in Touch",
+			"title": "Let's Work Together",
+			"description": "Have a project in mind or want to collaborate? I'd love to hear from you. Send me a message and I'll get back to you as soon as possible."
+		},
+		"form": {
+			"title": "Send a Message",
+			"name": "Name",
+			"namePlaceholder": "Your name",
+			"email": "Email",
+			"emailPlaceholder": "your@email.com",
+			"message": "Message",
+			"messagePlaceholder": "Tell me about your project...",
+			"submit": "Send Message",
+			"successTitle": "Message Sent!",
+			"successDescription": "Thank you for reaching out. I'll get back to you soon."
+		},
+		"toast": {
+			"success": "Message sent",
+			"error": "Something went wrong"
+		},
+		"info": {
+			"email": "Email",
+			"location": "Location",
+			"locationValue": "Tashkent, Uzbekistan"
+		},
+		"social": {
+			"title": "Connect",
+			"github": "GitHub",
+			"linkedin": "LinkedIn",
+			"instagram": "Instagram"
+		},
+		"availability": {
+			"title": "Available for work",
+			"description": "I'm currently open to new opportunities and collaborations. Let's discuss your project!"
+		},
+		"telegram": {
+			"title": "New request",
+			"name": "Name",
+			"email": "Email",
+			"message": "Message",
+			"phone": "Phone"
+		}
+	}
+}
