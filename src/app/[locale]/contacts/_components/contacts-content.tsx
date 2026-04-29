@@ -52,7 +52,7 @@ export const ContactsContent = () => {
 			email: "",
 			phone: "",
 			message: "",
-		}
+		},
 	});
 
 	const onSubmit = async (data: ContactSchemaType) => {

@@ -1,5 +1,6 @@
 import CRMProImage from "@public/projects/crmpro.uz.png";
 import DeltaImage from "@public/projects/delta.png";
+import MarketImage from "@public/projects/demo-online-market.vercel.app_.png";
 import DikomImage from "@public/projects/dikom.ru.png";
 import DobroImage from "@public/projects/dobro.io.png";
 import DoirastanImage from "@public/projects/doirastan.uz.png";
@@ -632,6 +633,99 @@ export const projects: Project[] = [
 		date: "2026-01",
 
 		liveUrl: "https://new.nse.uz",
+	},
+	{
+		id: "8",
+
+		title: {
+			en: "Online Market Demo",
+			ru: "Демо интернет-магазин",
+			uz: "Demo internet do‘kon",
+		},
+
+		slug: "online-market-demo",
+
+		description: {
+			en: "Demo e-commerce platform showcasing modern UI, fast performance, and scalable frontend architecture",
+			ru: "Демо e-commerce платформа с современным UI, высокой скоростью и масштабируемой архитектурой фронтенда",
+			uz: "Zamonaviy UI, tez ishlash va scalable frontend arxitekturaga ega demo e-commerce platforma",
+		},
+
+		longDescription: {
+			en: "Developed a demo online store to showcase modern frontend approaches and e-commerce UI patterns. The initial UI was generated using v0.dev to accelerate development and prototyping. After that, the project was fully restructured and optimized manually — improving code quality, component architecture, scalability, and maintainability. The focus was on performance, clean structure, and real-world product scenarios.",
+			ru: "Разработан демонстрационный интернет-магазин для показа современных подходов к frontend разработке и e-commerce интерфейсам. Начальная версия UI была сгенерирована с помощью v0.dev для ускорения разработки и прототипирования. Далее проект был полностью переработан вручную — улучшена структура кода, архитектура компонентов, масштабируемость и поддерживаемость. Основной акцент сделан на производительности и реальных сценариях использования.",
+			uz: "Zamonaviy frontend yondashuvlari va e-commerce UI ni ko‘rsatish uchun demo internet do‘kon ishlab chiqildi. Dastlab UI v0.dev orqali generatsiya qilinib, development jarayoni tezlashtirildi. Keyinchalik loyiha to‘liq qo‘lda qayta ishlanib, kod strukturasi, komponent arxitekturasi, scalable va maintainable holatga keltirildi. Asosiy e’tibor performance va real product scenariylarga qaratildi.",
+		},
+
+		techStack: [
+			"Next.js",
+			"React",
+			"TypeScript",
+			"Tailwind CSS",
+			"Vercel",
+			"v0.dev",
+		],
+
+		image: MarketImage,
+
+		screenshots: [
+			"https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=800&fit=crop",
+			"https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=1200&h=800&fit=crop",
+		],
+
+		responsibilities: {
+			en: [
+				"Generated initial UI using v0.dev",
+				"Refactored and improved project structure manually",
+				"Built reusable and scalable components",
+				"Implemented product catalog and UI logic",
+				"Optimized performance and loading speed",
+			],
+			ru: [
+				"Генерация базового UI с помощью v0.dev",
+				"Ручная переработка структуры проекта",
+				"Создание переиспользуемых и масштабируемых компонентов",
+				"Реализация каталога товаров и UI логики",
+				"Оптимизация производительности",
+			],
+			uz: [
+				"v0.dev yordamida boshlang‘ich UI generatsiya qilish",
+				"Loyiha strukturasi qo‘lda qayta ishlab chiqildi",
+				"Reusable va scalable komponentlar yaratish",
+				"Mahsulot katalogi va UI logika yaratish",
+				"Performance optimizatsiya",
+			],
+		},
+
+		results: {
+			en: [
+				"Accelerated development using AI-generated UI",
+				"Improved code structure and maintainability",
+				"Faster performance and better UX",
+				"Scalable frontend architecture ready for real projects",
+			],
+			ru: [
+				"Ускорена разработка за счёт AI генерации UI",
+				"Улучшена структура и поддерживаемость кода",
+				"Повышена производительность и UX",
+				"Создана масштабируемая архитектура фронтенда",
+			],
+			uz: [
+				"AI yordamida development tezlashtirildi",
+				"Kod struktura va maintainability yaxshilandi",
+				"Performance va UX oshirildi",
+				"Scalable frontend arxitektura yaratildi",
+			],
+		},
+
+		category: "E-commerce",
+
+		featured: true,
+
+		date: "2026-04",
+
+		liveUrl: "https://demo-online-market.vercel.app/",
+		githubUrl: "https://github.com/khaetbek/demo-online-market",
 	},
 ];
 
