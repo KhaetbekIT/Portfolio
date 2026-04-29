@@ -6,6 +6,8 @@ import DobroImage from "@public/projects/dobro.io.png";
 import DoirastanImage from "@public/projects/doirastan.uz.png";
 import EliteDDImage from "@public/projects/elite-dd.png";
 import NSEImage from "@public/projects/new.nse.uz.png";
+import NuxsImage from "@public/projects/nuxs18.vercel.app_.png";
+import RobogenImage from "@public/projects/ROBOGEN.png";
 import type { Project } from "@/types/project.type";
 
 export const projects: Project[] = [
@@ -395,6 +397,7 @@ export const projects: Project[] = [
 			"REST API",
 			"Next-Intl",
 			"Next-Auth",
+			"Zustand",
 		],
 
 		image: CRMProImage,
@@ -668,10 +671,7 @@ export const projects: Project[] = [
 
 		image: MarketImage,
 
-		screenshots: [
-			"https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=800&fit=crop",
-			"https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=1200&h=800&fit=crop",
-		],
+		screenshots: [],
 
 		responsibilities: {
 			en: [
@@ -725,7 +725,187 @@ export const projects: Project[] = [
 		date: "2026-04",
 
 		liveUrl: "https://demo-online-market.vercel.app/",
-		githubUrl: "https://github.com/khaetbek/demo-online-market",
+		githubUrl: "https://github.com/KhaetbekIT/Market",
+	},
+	{
+		id: "9",
+
+		title: {
+			en: "ROBOGEN AI",
+			ru: "ROBOGEN AI",
+			uz: "ROBOGEN AI",
+		},
+
+		slug: "robogen-ai-platform",
+
+		description: {
+			en: "Modern AI and robotics website showcasing robot dogs, humanoid systems, and future technologies",
+			ru: "Современный сайт про AI и робототехнику с демонстрацией роботов, гуманоидов и технологий будущего",
+			uz: "AI va robototexnika haqida zamonaviy sayt — robot itlar, humanoid robotlar va kelajak texnologiyalari",
+		},
+
+		longDescription: {
+			en: "Developed a modern technology-focused website dedicated to AI and robotics. The project highlights robot dogs, humanoid systems, and advanced automation concepts. The focus was on creating a futuristic UI, smooth animations, and a clean scalable frontend architecture. Special attention was given to performance, visual experience, and interactive presentation.",
+			ru: "Разработан современный сайт, посвящённый AI и робототехнике. Проект демонстрирует робот-собак, гуманоидных роботов и передовые технологии. Основной акцент сделан на футуристичном UI, плавных анимациях и масштабируемой архитектуре фронтенда. Особое внимание уделено производительности и визуальному восприятию.",
+			uz: "AI va robototexnikaga bag‘ishlangan zamonaviy sayt ishlab chiqildi. Loyihada robot itlar, humanoid robotlar va ilg‘or texnologiyalar namoyish etilgan. Asosiy e’tibor futuristik UI, animatsiyalar va scalable frontend arxitekturaga qaratildi. Performance va vizual tajriba ustida alohida ishlangan.",
+		},
+
+		techStack: [
+			"Next.js",
+			"React",
+			"TypeScript",
+			"Tailwind CSS",
+			"Framer Motion",
+			"Vercel",
+			"Zustand",
+		],
+
+		image: RobogenImage,
+
+		screenshots: [],
+
+		responsibilities: {
+			en: [
+				"Designed futuristic UI and visual concept",
+				"Developed full frontend architecture",
+				"Implemented animations and interactive sections",
+				"Built reusable and scalable components",
+				"Optimized performance and UX",
+			],
+			ru: [
+				"Разработка футуристичного UI и визуальной концепции",
+				"Создание архитектуры фронтенда",
+				"Реализация анимаций и интерактивных блоков",
+				"Создание переиспользуемых компонентов",
+				"Оптимизация производительности и UX",
+			],
+			uz: [
+				"Futuristik UI va dizayn konsepsiyasini ishlab chiqish",
+				"Frontend arxitektura yaratish",
+				"Animatsiya va interaktiv bloklar yaratish",
+				"Reusable komponentlar ishlab chiqish",
+				"Performance va UX optimizatsiya",
+			],
+		},
+
+		results: {
+			en: [
+				"Strong visual identity for tech product",
+				"Improved user engagement through animations",
+				"Fast and smooth user experience",
+				"Scalable architecture for future expansion",
+			],
+			ru: [
+				"Сформирован сильный визуальный стиль продукта",
+				"Повышено вовлечение за счёт анимаций",
+				"Быстрый и плавный пользовательский опыт",
+				"Масштабируемая архитектура для развития",
+			],
+			uz: [
+				"Kuchli vizual brend yaratildi",
+				"Animatsiyalar orqali foydalanuvchi faolligi oshdi",
+				"Tez va smooth UX ta’minlandi",
+				"Kelajak uchun scalable arxitektura yaratildi",
+			],
+		},
+
+		category: "AI Platform",
+
+		featured: true,
+
+		date: "2026-04",
+
+		liveUrl: "https://robogen-ai.vercel.app/",
+		githubUrl: "https://github.com/KhaetbekIT/ROBOGEN-AI",
+	},
+	{
+		id: "10",
+
+		title: {
+			en: "NUXS 18 Platform",
+			ru: "NUXS 18 платформа",
+			uz: "NUXS 18 platforma",
+		},
+
+		slug: "nuxs18-platform",
+
+		description: {
+			en: "Modern digital platform focused on content presentation and user interaction with clean UI and responsive design",
+			ru: "Современная цифровая платформа с акцентом на контент, удобный UI и взаимодействие с пользователем",
+			uz: "Kontentga yo‘naltirilgan zamonaviy platforma — toza UI va foydalanuvchi interaksiyasi bilan",
+		},
+
+		longDescription: {
+			en: "Developed a modern web platform focused on structured content presentation and user interaction. The project includes responsive layout, clean UI, and scalable frontend architecture. Special attention was given to usability, performance optimization, and smooth navigation across different devices.",
+			ru: "Разработана современная веб-платформа с акцентом на структурированное представление контента и взаимодействие с пользователем. В проекте реализованы адаптивный дизайн, чистый интерфейс и масштабируемая архитектура фронтенда. Особое внимание уделено удобству, производительности и навигации.",
+			uz: "Kontentni tartibli ko‘rsatish va foydalanuvchi bilan interaksiyaga yo‘naltirilgan zamonaviy platforma ishlab chiqildi. Loyiha responsiv dizayn, toza UI va scalable frontend arxitekturani o‘z ichiga oladi. Asosiy e’tibor usability va performance ga qaratildi.",
+		},
+
+		techStack: [
+			"Next.js",
+			"React",
+			"TypeScript",
+			"Tailwind CSS",
+			"Next-Intl",
+			"Vercel",
+		],
+
+		image: NuxsImage,
+
+		screenshots: [],
+
+		responsibilities: {
+			en: [
+				"Developed full frontend structure",
+				"Built responsive and adaptive UI",
+				"Implemented content-driven layout",
+				"Optimized performance and loading speed",
+				"Worked on UX and navigation",
+			],
+			ru: [
+				"Разработка фронтенд-структуры сайта",
+				"Адаптивная верстка",
+				"Реализация контентной структуры",
+				"Оптимизация производительности",
+				"Работа над UX и навигацией",
+			],
+			uz: [
+				"Frontend strukturani ishlab chiqish",
+				"Responsive dizayn",
+				"Kontent strukturasini yaratish",
+				"Performance optimizatsiya",
+				"UX va navigatsiya ustida ishlash",
+			],
+		},
+
+		results: {
+			en: [
+				"Improved content readability",
+				"Better user navigation",
+				"Fast loading performance",
+				"Clean and scalable UI structure",
+			],
+			ru: [
+				"Улучшена читаемость контента",
+				"Удобная навигация",
+				"Быстрая загрузка страниц",
+				"Чистая и масштабируемая структура",
+			],
+			uz: [
+				"Kontent o‘qilishi yaxshilandi",
+				"Qulay navigatsiya yaratildi",
+				"Tez yuklanish ta’minlandi",
+				"Toza va scalable UI struktura",
+			],
+		},
+
+		category: "Web Platform",
+
+		featured: false,
+
+		date: "2026-04",
+
+		liveUrl: "https://nuxs18.vercel.app/",
 	},
 ];
 
