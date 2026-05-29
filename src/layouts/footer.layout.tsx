@@ -10,7 +10,9 @@ const socialIcons = {
 	github: FaGithub,
 	linkedin: FaLinkedin,
 	instagram: FaInstagram,
-};
+} as const;
+
+type SocialKey = keyof typeof socialIcons;
 
 export function Footer() {
 	const t = useTranslations("Footer");
@@ -44,7 +46,7 @@ export function Footer() {
 				},
 			],
 		},
-	];
+	] as const;
 
 	return (
 		<footer className="border-t border-border/50 bg-background">
@@ -67,7 +69,7 @@ export function Footer() {
 								([key, url]) => {
 									const Icon =
 										socialIcons[
-											key as keyof typeof socialIcons
+											key as SocialKey
 										];
 									if (!Icon) return null;
 
@@ -77,6 +79,7 @@ export function Footer() {
 											href={url}
 											target="_blank"
 											rel="noopener noreferrer"
+											aria-label={`Visit our ${key}`}
 											className="flex h-9 w-9 items-center justify-center rounded-full bg-secondary text-muted-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
 										>
 											<Icon className="h-4 w-4" />
@@ -87,6 +90,7 @@ export function Footer() {
 
 							<a
 								href={`mailto:${siteSettings.email}`}
+								aria-label="Send us an email"
 								className="flex h-9 w-9 items-center justify-center rounded-full bg-secondary text-muted-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
 							>
 								<FaMailBulk className="h-4 w-4" />

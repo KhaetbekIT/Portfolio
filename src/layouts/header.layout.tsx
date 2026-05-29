@@ -29,6 +29,18 @@ export function Header() {
 	const pathname = usePathname();
 	const locale = useLocale();
 
+	const closeMobileMenu = () => setMobileMenuOpen(false);
+
+	const renderNavLink = (href: string, label: string) => (
+		<Link
+			href={href}
+			key={href}
+			className="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+		>
+			{label}
+		</Link>
+	);
+
 	return (
 		<header className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-lg shrink-0">
 			<nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
@@ -36,6 +48,7 @@ export function Header() {
 				<Link
 					href={ROUTERS.home}
 					className="inline-flex items-center overflow-hidden rounded-full"
+					aria-label="Home"
 				>
 					<Image
 						src={LogoImage}
@@ -49,15 +62,9 @@ export function Header() {
 
 				{/* Desktop Navigation */}
 				<div className="hidden items-center gap-1 lg:flex">
-					{navLinks.map((link) => (
-						<Link
-							key={link.href}
-							href={link.href}
-							className="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
-						>
-							{link.label[locale]}
-						</Link>
-					))}
+					{navLinks.map((link) =>
+						renderNavLink(link.href, link.label[locale]),
+					)}
 				</div>
 
 				{/* Right side actions */}
@@ -69,9 +76,9 @@ export function Header() {
 								variant="ghost"
 								size="icon"
 								className="hidden lg:flex"
+								aria-label="Switch language"
 							>
 								<Globe className="h-4 w-4" />
-								<span className="sr-only">Switch language</span>
 							</Button>
 						</DropdownMenuTrigger>
 						<DropdownMenuContent className="space-y-1" align="end">
@@ -99,7 +106,7 @@ export function Header() {
 
 					{/* CTA Button */}
 					<Button asChild className="hidden lg:inline-flex">
-						<Link href={ROUTERS.contacts}>{"Связаться"}</Link>
+						<Link href={ROUTERS.contacts}>Связаться</Link>
 					</Button>
 
 					{/* Mobile menu button */}
@@ -108,13 +115,17 @@ export function Header() {
 						size="icon"
 						className="lg:hidden"
 						onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+						aria-label={
+							mobileMenuOpen ? "Close menu" : "Open menu"
+						}
+						aria-expanded={mobileMenuOpen}
+						aria-controls="mobile-menu"
 					>
 						{mobileMenuOpen ? (
 							<X className="h-5 w-5" />
 						) : (
 							<Menu className="h-5 w-5" />
 						)}
-						<span className="sr-only">Toggle menu</span>
 					</Button>
 				</div>
 			</nav>
@@ -123,6 +134,7 @@ export function Header() {
 			<AnimatePresence>
 				{mobileMenuOpen && (
 					<motion.div
+						id="mobile-menu"
 						initial={{ opacity: 0, height: 0 }}
 						animate={{ opacity: 1, height: "auto" }}
 						exit={{ opacity: 0, height: 0 }}
@@ -133,7 +145,7 @@ export function Header() {
 								<Link
 									key={link.href}
 									href={link.href}
-									onClick={() => setMobileMenuOpen(false)}
+									onClick={closeMobileMenu}
 									className="block rounded-md px-3 py-2 text-base text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
 								>
 									{link.label[locale]}
@@ -142,32 +154,32 @@ export function Header() {
 
 							<div className="pt-4">
 								<Button asChild className="w-full">
-									<Link href={ROUTERS.contacts}>
-										{"Связаться"}
+									<Link
+										href={ROUTERS.contacts}
+										onClick={closeMobileMenu}
+									>
+										Связаться
 									</Link>
 								</Button>
 							</div>
+
 							{/* Mobile Language Switcher */}
 							<div className="flex items-center gap-2 pt-2">
 								{languages.map((lang) => (
-									<button
-										type="button"
+									<Link
 										key={lang.code}
+										locale={lang.code}
+										href={{ pathname }}
+										onClick={closeMobileMenu}
 										className={cn(
-											"rounded-md text-sm transition-colors",
+											"inline-block rounded-md px-3 py-1.5 text-sm transition-colors",
 											locale === lang.code
 												? "bg-primary text-primary-foreground"
 												: "bg-secondary text-secondary-foreground",
 										)}
 									>
-										<Link
-											locale={lang.code}
-											href={{ pathname }}
-											className="px-3 py-1.5 inline-block"
-										>
-											{lang.code.toUpperCase()}
-										</Link>
-									</button>
+										{lang.code.toUpperCase()}
+									</Link>
 								))}
 							</div>
 						</div>

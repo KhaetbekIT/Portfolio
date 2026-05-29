@@ -9,9 +9,7 @@ import { useForm } from "react-hook-form";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Bounce, ToastContainer, toast } from "react-toastify";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
+import { TextareaField, TextInputField } from "@/components/ui/form-field";
 import { siteSettings } from "@/mocks/user.mock";
 import {
 	type ContactSchemaType,
@@ -22,19 +20,19 @@ const socialLinks = [
 	{ icon: FaGithub, label: "GitHub", key: "github" },
 	{ icon: FaLinkedin, label: "LinkedIn", key: "linkedin" },
 	{ icon: FaInstagram, label: "Instagram", key: "instagram" },
-];
+] as const;
 
-const toastOption: Record<string, unknown> = {
-	position: "top-center",
+const toastOptions = {
+	position: "top-center" as const,
 	autoClose: 5000,
 	hideProgressBar: false,
 	closeOnClick: true,
 	pauseOnHover: true,
 	draggable: true,
 	progress: 0.1,
-	theme: "dark",
+	theme: "dark" as const,
 	transition: Bounce,
-};
+} as const;
 
 export const ContactsContent = () => {
 	const [pending, startTransition] = useTransition();
@@ -76,14 +74,14 @@ ${t("telegram.message")}: ${data.message}
 				});
 
 				if (!response.ok) {
-					toast.error(t("toast.error"), toastOption);
+					toast.error(t("toast.error"), toastOptions);
+					return;
 				}
 
-				toast.success(t("toast.success"), toastOption);
+				toast.success(t("toast.success"), toastOptions);
 				reset();
-			} catch (error) {
-				console.error(error);
-				toast.error(t("toast.error"), toastOption);
+			} catch {
+				toast.error(t("toast.error"), toastOptions);
 			}
 		});
 	};
@@ -143,103 +141,50 @@ ${t("telegram.message")}: ${data.message}
 									className="space-y-6"
 								>
 									{/* Name */}
-									<div className="space-y-2">
-										<Label htmlFor="name">
-											{t("form.name")}
-										</Label>
-										<Input
-											id="name"
-											placeholder={t(
-												"form.namePlaceholder",
-											)}
-											{...register("name")}
-											className={
-												errors.name
-													? "border-destructive"
-													: ""
-											}
-										/>
-										{errors.name && (
-											<p className="text-sm text-destructive">
-												{errors.name.message}
-											</p>
-										)}
-									</div>
+									<TextInputField
+										label={t("form.name")}
+										id="name"
+										placeholder={t("form.namePlaceholder")}
+										type="text"
+										error={errors.name}
+										register={register("name")}
+										required
+									/>
 
 									{/* Email */}
-									<div className="space-y-2">
-										<Label htmlFor="email">
-											{t("form.email")}
-										</Label>
-										<Input
-											id="email"
-											type="email"
-											placeholder={t(
-												"form.emailPlaceholder",
-											)}
-											{...register("email")}
-											className={
-												errors.email
-													? "border-destructive"
-													: ""
-											}
-										/>
-										{errors.email && (
-											<p className="text-sm text-destructive">
-												{errors.email.message}
-											</p>
-										)}
-									</div>
+									<TextInputField
+										label={t("form.email")}
+										id="email"
+										placeholder={t("form.emailPlaceholder")}
+										type="email"
+										error={errors.email}
+										register={register("email")}
+										required
+									/>
 
 									{/* Phone */}
-									<div className="space-y-2">
-										<Label htmlFor="phone">
-											{t("form.phone")}
-										</Label>
-										<Input
-											id="phone"
-											type="tel"
-											placeholder={t(
-												"form.phonePlaceholder",
-											)}
-											{...register("phone")}
-											className={
-												errors.phone
-													? "border-destructive"
-													: ""
-											}
-										/>
-										{errors.phone && (
-											<p className="text-sm text-destructive">
-												{errors.phone.message}
-											</p>
-										)}
-									</div>
+									<TextInputField
+										label={t("form.phone")}
+										id="phone"
+										placeholder={t("form.phonePlaceholder")}
+										type="tel"
+										error={errors.phone}
+										register={register("phone")}
+										required
+									/>
 
 									{/* Message */}
-									<div className="space-y-2">
-										<Label htmlFor="message">
-											{t("form.message")}
-										</Label>
-										<Textarea
-											id="message"
-											placeholder={t(
-												"form.messagePlaceholder",
-											)}
-											rows={6}
-											{...register("message")}
-											className={
-												errors.message
-													? "border-destructive"
-													: ""
-											}
-										/>
-										{errors.message && (
-											<p className="text-sm text-destructive">
-												{errors.message.message}
-											</p>
+									<TextareaField
+										label={t("form.message")}
+										id="message"
+										placeholder={t(
+											"form.messagePlaceholder",
 										)}
-									</div>
+										rows={6}
+										error={errors.message}
+										register={register("message")}
+										required
+									/>
 
 									{/* Submit */}
 									<Button

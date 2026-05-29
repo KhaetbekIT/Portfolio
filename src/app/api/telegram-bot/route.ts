@@ -1,17 +1,15 @@
+import * as z from "zod";
 import { ENV } from "@/configs/env.config";
+import {
+	messageSchema,
+	type TelegramMessage,
+} from "@/schemas/telegram-bot.schema";
 
-export const POST = async (req: Request) => {
+async function sendTelegramMessage(
+	message: TelegramMessage,
+): Promise<{ ok: boolean; error?: unknown }> {
 	try {
-		const { text, parse_mode = "HTML" } = await req.json();
-
-		if (!text) {
-			return new Response(
-				JSON.stringify({ ok: false, error: "Text is required" }),
-				{ status: 400 },
-			);
-		}
-
-		const telegramRes = await fetch(
+		const response = await fetch(
 			`${ENV.TELEGRAM_BOT_API}/bot${ENV.TELEGRAM_BOT_TOKEN}/sendMessage`,
 			{
 				method: "POST",
@@ -20,36 +18,57 @@ export const POST = async (req: Request) => {
 				},
 				body: JSON.stringify({
 					chat_id: ENV.TELEGRAM_BOT_CHATID,
-					text,
-					parse_mode,
+					text: message.text,
+					parse_mode: message.parse_mode,
 				}),
 			},
 		);
 
-		const data = await telegramRes.json();
+		const data = (await response.json()) as unknown;
 
-		if (!telegramRes.ok) {
-			return new Response(JSON.stringify({ ok: false, error: data }), {
-				status: 500,
-			});
+		if (!response.ok) {
+			return { ok: false, error: data };
 		}
 
-		return new Response(
-			JSON.stringify({
-				ok: true,
-				result: data,
-			}),
-			{ status: 200 },
-		);
+		return { ok: true };
 	} catch (error) {
-		console.error(error);
+		return { ok: false, error };
+	}
+}
 
-		return new Response(
-			JSON.stringify({
-				ok: false,
-				error: "Internal Server Error",
-			}),
+export async function POST(req: Request): Promise<Response> {
+	try {
+		const body = (await req.json()) as unknown;
+		const validatedData = messageSchema.parse(body);
+
+		const result = await sendTelegramMessage(validatedData);
+
+		if (!result.ok) {
+			return Response.json(
+				{ ok: false, error: "Failed to send message" },
+				{ status: 500 },
+			);
+		}
+
+		return Response.json({ ok: true }, { status: 200 });
+	} catch (error) {
+		if (error instanceof z.ZodError) {
+			return Response.json(
+				{ ok: false, error: "Invalid request format" },
+				{ status: 400 },
+			);
+		}
+
+		if (error instanceof SyntaxError) {
+			return Response.json(
+				{ ok: false, error: "Invalid JSON" },
+				{ status: 400 },
+			);
+		}
+
+		return Response.json(
+			{ ok: false, error: "Internal server error" },
 			{ status: 500 },
 		);
 	}
-};
+}
