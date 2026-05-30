@@ -1,4 +1,3 @@
-import type { Metadata, ResolvingMetadata } from "next";
 import type { Locale } from "next-intl";
 import type { ReactNode } from "react";
 

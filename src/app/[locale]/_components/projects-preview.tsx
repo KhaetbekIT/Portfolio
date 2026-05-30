@@ -57,6 +57,7 @@ export function ProjectsPreviewSection() {
 										alt={project.title[locale]}
 										fill
 										className="object-top object-cover transition-transform duration-300 group-hover:scale-105"
+										sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 									/>
 									{project.featured && (
 										<div className="absolute left-3 top-3 rounded-full bg-primary px-2 py-0.5 text-xs font-medium text-primary-foreground">

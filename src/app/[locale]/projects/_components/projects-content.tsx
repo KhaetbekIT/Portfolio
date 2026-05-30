@@ -117,11 +117,11 @@ export const ProjectsContent = () => {
 								{/* Project Image */}
 								<div className="relative aspect-video overflow-hidden">
 									<Image
-										src={
-											project.image || "/placeholder.svg"
-										}
+										src={project.image}
 										alt={project.title[locale]}
-										fill
+										width={1200}
+										height={800}
+										priority
 										className="object-top object-cover transition-transform duration-300 group-hover:scale-105"
 									/>
 									{project.featured && (
