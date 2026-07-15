@@ -1,3 +1,4 @@
+import { ENV } from "@/configs/env.config";
 import UserAvatar from "@public/avatar.jpg";
 
 export const siteSettings = {
@@ -24,9 +25,9 @@ export const siteSettings = {
 	avatar: UserAvatar,
 
 	social: {
-		github: "https://github.com/KhaetbekIT",
-		linkedin: "https://linkedin.com/in/khaetbekit",
-		instagram: "https://instagram.com/khaetbek_2026",
+		github: ENV.GITHUB_URL,
+		linkedin: ENV.LINKEDIN_URL,
+		telegram: ENV.TELEGRAM_URL,
 	},
 
 	seo: {

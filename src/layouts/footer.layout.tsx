@@ -2,14 +2,14 @@
 
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { FaGithub, FaInstagram, FaLinkedin, FaMailBulk } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaMailBulk, FaTelegram } from "react-icons/fa";
 import { ROUTERS } from "@/configs/router.config";
 import { siteSettings } from "@/mocks/user.mock";
 
 const socialIcons = {
 	github: FaGithub,
 	linkedin: FaLinkedin,
-	instagram: FaInstagram,
+	telegram: FaTelegram,
 } as const;
 
 type SocialKey = keyof typeof socialIcons;
