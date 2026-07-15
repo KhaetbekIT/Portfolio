@@ -1,9 +1,15 @@
 import * as z from "zod";
-import { ENV } from "@/configs/env.config";
+import { ENV, validateRequiredEnv } from "@/configs/env.config";
 import {
 	messageSchema,
 	type TelegramMessage,
 } from "@/schemas/telegram-bot.schema";
+
+const requiredTelegramEnvVars = [
+	"TELEGRAM_BOT_TOKEN",
+	"TELEGRAM_BOT_CHATID",
+	"TELEGRAM_BOT_API",
+] as const;
 
 async function sendTelegramMessage(
 	message: TelegramMessage,
@@ -38,6 +44,8 @@ async function sendTelegramMessage(
 
 export async function POST(req: Request): Promise<Response> {
 	try {
+		validateRequiredEnv(requiredTelegramEnvVars);
+
 		const body = (await req.json()) as unknown;
 		const validatedData = messageSchema.parse(body);
 
